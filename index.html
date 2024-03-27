@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Details</title>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/qrcode.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      font-family: 'Segoe Script', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+    }
+    .container {
+      max-width: 400px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .flip-card {
+      perspective: 1000px;
+      display: inline-block;
+    }
+    .flip-card-inner {
+      width: 340px; /* Changed width to accommodate the larger image */
+      height: 250px; /* Changed height to accommodate the larger image */
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      position: relative;
+    }
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-card-front, .flip-card-back {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      backface-visibility: hidden;
+    }
+    .flip-card-front {
+      display: flex;
+      flex-direction: column; /* Changed to column layout */
+      justify-content: center;
+      align-items: center;
+    }
+    .flip-card-back {
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #f7f7f7;
+      border-radius: 10px;
+    }
+    .qr-code {
+      width: 200px;
+      height: 200px;
+    }
+    .event-details {
+      margin-top: 20px;
+      text-align: center;
+      font-family: 'Times New Roman', Times, serif; /* Set font to Times New Roman for certificate-like appearance */
+      font-size: 16px; /* Adjust font size as needed */
+    }
+  </style>
+</head>
+<body>
+  <br><br><br><br>
+    <div class="container">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="house1-removebg-preview.png" alt="Event Image" style="width:340px;height:250px;">
+            <p style="font-family: 'Segoe Script', sans-serif;">Invited by Murali Mohan & Family</p> <!-- Style font for certificate-like appearance -->
+          </div>
+          <div class="flip-card-back">
+            <div>
+             
+              <img src="qrcode.png" alt="" class="qr-code">
+            </div>
+            <p style="font-family: 'Segoe Script', sans-serif;">Please scan the QR Code to know the details</p> <!-- Style font for certificate-like appearance -->
+          </div>
+        </div>
+      </div>
+     
+    </div>
+  
+</body>
+</html>
